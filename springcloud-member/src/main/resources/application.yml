@@ -1,0 +1,16 @@
+server:
+  port: 8009
+spring:
+  application:
+    name: app-member
+eureka:
+  instance:
+    #服务失效时间
+    lease-expiration-duration-in-seconds: 90
+    #续约任务时间间隔
+    lease-renewal-interval-in-seconds: 30
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://peer1:8100/eureka/
